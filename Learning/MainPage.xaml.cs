@@ -44,5 +44,9 @@ namespace Learning
             this.Frame.Navigate(typeof(ListViewPage));
         }
 
+        private void pivot_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(PivotPage));
+        }
     }
 }

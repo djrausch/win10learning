@@ -36,6 +36,8 @@
             </StackPanel>
             <TextBlock x:Name="greetingOutput"/>
             <Button x:Name="button" Content="ListView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="listview_click"/>
+            <Button x:Name="buttonPivot" Content="Pivot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="pivot_click"/>
+
         </StackPanel>
 
     </Grid>
