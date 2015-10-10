@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +23,10 @@ namespace Learning
     /// </summary>
     public sealed partial class ListViewPage : Page
     {
-        private List<Photo> photos = new List<Photo>();
+        //private List<Photo> photos = new List<Photo>();
+        public ObservableCollection<Photo> photos = new ObservableCollection<Photo> { };
+        
 
-    
         public ListViewPage()
         {
 
@@ -56,6 +58,15 @@ namespace Learning
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             photoListView.ItemsSource = photos;
+        }
+
+        private void listview_item_click(object sender, ItemClickEventArgs e)
+        {
+            Photo p = e.ClickedItem as Photo;
+            System.Diagnostics.Debug.Write(p.Description);
+            Photo photo7 = new Photo("EleGiggle", "EleGiggle 4Head KappaPride",
+                "http://img2.wikia.nocookie.net/__cb20140609044845/pyruslords/images/thumb/3/31/EleGiggle.png/130px-0,29,0,28-EleGiggle.png", "Earth/Moon");
+            photos.Add(photo7);
         }
     }
 }

@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="NASA/JPL Photos" Style="{StaticResource HeaderTextBlockStyle}" Grid.Row="0" Margin="10,0"></TextBlock>
-        <ListView x:Name="photoListView" ItemsSource="{Binding}" Grid.Row="1" >
+        <ListView x:Name="photoListView" ItemsSource="{Binding}" Grid.Row="1" ItemClick="listview_item_click" IsItemClickEnabled="True" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="110" Margin="6">
